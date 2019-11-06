@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +17,8 @@ namespace Project03
         {
             InitializeComponent();
             LocationForm();
-            closeButton.Click += (s, e) => { Close(); };
+            closeButton.Click += (s, e) => { Thread thread = new Thread(
+                delegate () { Close(); });thread.Start(); };
             PasswordBox();
 
             username.Text = "Введите имя пользователя";
