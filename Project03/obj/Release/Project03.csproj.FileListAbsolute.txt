@@ -19,3 +19,13 @@ C:\Users\magom\Desktop\хз\MaraphoneTest\Project03\obj\Release\Project03.csproj
 C:\Users\magom\Desktop\хз\MaraphoneTest\Project03\obj\Release\Project03.csproj.CoreCompileInputs.cache
 C:\Users\magom\Desktop\хз\MaraphoneTest\Project03\obj\Release\Project03.exe
 C:\Users\magom\Desktop\хз\MaraphoneTest\Project03\obj\Release\Project03.pdb
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\bin\Release\Project03.exe.config
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\bin\Release\Project03.exe
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\bin\Release\Project03.pdb
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.csprojAssemblyReference.cache
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.LogIn.resources
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.Properties.Resources.resources
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.SignUp.resources
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.csproj.GenerateResource.cache
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.exe
+C:\Users\user\Desktop\хз\Project03new_version\MaraphoneTest\Project03\obj\Release\Project03.pdb

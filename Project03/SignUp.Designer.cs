@@ -71,6 +71,9 @@
             this.pnlTime = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.showPassword = new System.Windows.Forms.Button();
+            this.showConfirmPassword = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.gb_ConfidentialInfo.SuspendLayout();
             this.gb_PersonalInfo.SuspendLayout();
@@ -138,6 +141,7 @@
             // txt_Email
             // 
             this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txt_Email.Location = new System.Drawing.Point(83, 76);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(330, 20);
@@ -209,6 +213,8 @@
             // 
             // gb_ConfidentialInfo
             // 
+            this.gb_ConfidentialInfo.Controls.Add(this.showConfirmPassword);
+            this.gb_ConfidentialInfo.Controls.Add(this.showPassword);
             this.gb_ConfidentialInfo.Controls.Add(this.txt_Email);
             this.gb_ConfidentialInfo.Controls.Add(this.txt_Username);
             this.gb_ConfidentialInfo.Controls.Add(this.txt_Password);
@@ -216,6 +222,7 @@
             this.gb_ConfidentialInfo.Controls.Add(this.label6);
             this.gb_ConfidentialInfo.Controls.Add(this.label5);
             this.gb_ConfidentialInfo.Controls.Add(this.label4);
+            this.gb_ConfidentialInfo.Controls.Add(this.lblError);
             this.gb_ConfidentialInfo.Controls.Add(this.label3);
             this.gb_ConfidentialInfo.Controls.Add(this.panel2);
             this.gb_ConfidentialInfo.Controls.Add(this.panel1);
@@ -272,23 +279,23 @@
             // 
             // gb_PersonalInfo
             // 
+            this.gb_PersonalInfo.Controls.Add(this.txt_Name);
+            this.gb_PersonalInfo.Controls.Add(this.txt_Surname);
+            this.gb_PersonalInfo.Controls.Add(this.cmb_Gender);
             this.gb_PersonalInfo.Controls.Add(this.dtp_DateOfBirth);
             this.gb_PersonalInfo.Controls.Add(this.cmb_Country);
-            this.gb_PersonalInfo.Controls.Add(this.cmb_Gender);
+            this.gb_PersonalInfo.Controls.Add(this.txt_Picture);
             this.gb_PersonalInfo.Controls.Add(this.label10);
             this.gb_PersonalInfo.Controls.Add(this.label11);
             this.gb_PersonalInfo.Controls.Add(this.pictureRunner);
             this.gb_PersonalInfo.Controls.Add(this.label12);
             this.gb_PersonalInfo.Controls.Add(this.label9);
             this.gb_PersonalInfo.Controls.Add(this.btn_SelectPicture);
-            this.gb_PersonalInfo.Controls.Add(this.txt_Name);
             this.gb_PersonalInfo.Controls.Add(this.label8);
             this.gb_PersonalInfo.Controls.Add(this.label7);
-            this.gb_PersonalInfo.Controls.Add(this.txt_Picture);
             this.gb_PersonalInfo.Controls.Add(this.panel5);
             this.gb_PersonalInfo.Controls.Add(this.panel6);
             this.gb_PersonalInfo.Controls.Add(this.panel9);
-            this.gb_PersonalInfo.Controls.Add(this.txt_Surname);
             this.gb_PersonalInfo.Controls.Add(this.panel7);
             this.gb_PersonalInfo.Controls.Add(this.panel8);
             this.gb_PersonalInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -507,6 +514,7 @@
             this.btn_SignUp.TabIndex = 1;
             this.btn_SignUp.Text = "Регистрация";
             this.btn_SignUp.UseVisualStyleBackColor = false;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
             // btn_Cancel
             // 
@@ -546,6 +554,42 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // showPassword
+            // 
+            this.showPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPassword.FlatAppearance.BorderSize = 0;
+            this.showPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPassword.Image = global::Project03.Properties.Resources.icons8_visible_16;
+            this.showPassword.Location = new System.Drawing.Point(409, 196);
+            this.showPassword.Name = "showPassword";
+            this.showPassword.Size = new System.Drawing.Size(25, 25);
+            this.showPassword.TabIndex = 6;
+            this.showPassword.UseVisualStyleBackColor = false;
+            // 
+            // showConfirmPassword
+            // 
+            this.showConfirmPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showConfirmPassword.FlatAppearance.BorderSize = 0;
+            this.showConfirmPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.showConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showConfirmPassword.Image = global::Project03.Properties.Resources.icons8_visible_16;
+            this.showConfirmPassword.Location = new System.Drawing.Point(409, 265);
+            this.showConfirmPassword.Name = "showConfirmPassword";
+            this.showConfirmPassword.Size = new System.Drawing.Size(25, 25);
+            this.showConfirmPassword.TabIndex = 6;
+            this.showConfirmPassword.UseVisualStyleBackColor = false;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(80, 171);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 15);
+            this.lblError.TabIndex = 5;
             // 
             // SignUp
             // 
@@ -623,5 +667,8 @@
         private System.Windows.Forms.Panel pnlTime;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button showConfirmPassword;
+        private System.Windows.Forms.Button showPassword;
+        private System.Windows.Forms.Label lblError;
     }
 }
