@@ -43,27 +43,30 @@
             this.txt_ConfirmPassword = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gb_ConfidentialInfo = new System.Windows.Forms.GroupBox();
+            this.showConfirmPassword = new System.Windows.Forms.Button();
+            this.showPassword = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.gb_PersonalInfo = new System.Windows.Forms.GroupBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.txt_Surname = new System.Windows.Forms.TextBox();
+            this.cmb_Gender = new System.Windows.Forms.ComboBox();
             this.dtp_DateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.cmb_Country = new System.Windows.Forms.ComboBox();
-            this.cmb_Gender = new System.Windows.Forms.ComboBox();
+            this.txt_Picture = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureRunner = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_Name = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_Picture = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txt_Surname = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_SignUp = new System.Windows.Forms.Button();
@@ -71,9 +74,6 @@
             this.pnlTime = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.showPassword = new System.Windows.Forms.Button();
-            this.showConfirmPassword = new System.Windows.Forms.Button();
-            this.lblError = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.gb_ConfidentialInfo.SuspendLayout();
             this.gb_PersonalInfo.SuspendLayout();
@@ -237,6 +237,32 @@
             this.gb_ConfidentialInfo.TabStop = false;
             this.gb_ConfidentialInfo.Text = "Конфиденциальная информация";
             // 
+            // showConfirmPassword
+            // 
+            this.showConfirmPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showConfirmPassword.FlatAppearance.BorderSize = 0;
+            this.showConfirmPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.showConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showConfirmPassword.Image = global::Project03.Properties.Resources.icons8_visible_16;
+            this.showConfirmPassword.Location = new System.Drawing.Point(409, 265);
+            this.showConfirmPassword.Name = "showConfirmPassword";
+            this.showConfirmPassword.Size = new System.Drawing.Size(25, 25);
+            this.showConfirmPassword.TabIndex = 6;
+            this.showConfirmPassword.UseVisualStyleBackColor = false;
+            // 
+            // showPassword
+            // 
+            this.showPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPassword.FlatAppearance.BorderSize = 0;
+            this.showPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPassword.Image = global::Project03.Properties.Resources.icons8_visible_16;
+            this.showPassword.Location = new System.Drawing.Point(409, 196);
+            this.showPassword.Name = "showPassword";
+            this.showPassword.Size = new System.Drawing.Size(25, 25);
+            this.showPassword.TabIndex = 6;
+            this.showPassword.UseVisualStyleBackColor = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -266,6 +292,16 @@
             this.label4.Size = new System.Drawing.Size(137, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Имя пользователя*:";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(80, 171);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 15);
+            this.lblError.TabIndex = 5;
             // 
             // label3
             // 
@@ -306,6 +342,39 @@
             this.gb_PersonalInfo.TabIndex = 6;
             this.gb_PersonalInfo.TabStop = false;
             this.gb_PersonalInfo.Text = "Ваша личная информация";
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txt_Name.Location = new System.Drawing.Point(40, 55);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(330, 20);
+            this.txt_Name.TabIndex = 3;
+            // 
+            // txt_Surname
+            // 
+            this.txt_Surname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Surname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txt_Surname.Location = new System.Drawing.Point(40, 118);
+            this.txt_Surname.Name = "txt_Surname";
+            this.txt_Surname.Size = new System.Drawing.Size(330, 20);
+            this.txt_Surname.TabIndex = 3;
+            // 
+            // cmb_Gender
+            // 
+            this.cmb_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Gender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_Gender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmb_Gender.FormattingEnabled = true;
+            this.cmb_Gender.Items.AddRange(new object[] {
+            "Не выбрано",
+            "Мужской",
+            "Женский"});
+            this.cmb_Gender.Location = new System.Drawing.Point(40, 185);
+            this.cmb_Gender.Name = "cmb_Gender";
+            this.cmb_Gender.Size = new System.Drawing.Size(333, 29);
+            this.cmb_Gender.TabIndex = 6;
             // 
             // dtp_DateOfBirth
             // 
@@ -350,20 +419,14 @@
             this.cmb_Country.Size = new System.Drawing.Size(333, 29);
             this.cmb_Country.TabIndex = 6;
             // 
-            // cmb_Gender
+            // txt_Picture
             // 
-            this.cmb_Gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Gender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_Gender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cmb_Gender.FormattingEnabled = true;
-            this.cmb_Gender.Items.AddRange(new object[] {
-            "Не выбрано",
-            "Мужской",
-            "Женский"});
-            this.cmb_Gender.Location = new System.Drawing.Point(40, 185);
-            this.cmb_Gender.Name = "cmb_Gender";
-            this.cmb_Gender.Size = new System.Drawing.Size(333, 29);
-            this.cmb_Gender.TabIndex = 6;
+            this.txt_Picture.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Picture.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txt_Picture.Location = new System.Drawing.Point(440, 270);
+            this.txt_Picture.Name = "txt_Picture";
+            this.txt_Picture.Size = new System.Drawing.Size(169, 20);
+            this.txt_Picture.TabIndex = 3;
             // 
             // label10
             // 
@@ -414,15 +477,6 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Пол*:";
             // 
-            // txt_Name
-            // 
-            this.txt_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txt_Name.Location = new System.Drawing.Point(40, 55);
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(330, 20);
-            this.txt_Name.TabIndex = 3;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -442,15 +496,6 @@
             this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 5;
             this.label7.Text = "Имя*:";
-            // 
-            // txt_Picture
-            // 
-            this.txt_Picture.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Picture.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txt_Picture.Location = new System.Drawing.Point(440, 270);
-            this.txt_Picture.Name = "txt_Picture";
-            this.txt_Picture.Size = new System.Drawing.Size(169, 20);
-            this.txt_Picture.TabIndex = 3;
             // 
             // panel5
             // 
@@ -475,15 +520,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(330, 5);
             this.panel9.TabIndex = 4;
-            // 
-            // txt_Surname
-            // 
-            this.txt_Surname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Surname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txt_Surname.Location = new System.Drawing.Point(40, 118);
-            this.txt_Surname.Name = "txt_Surname";
-            this.txt_Surname.Size = new System.Drawing.Size(330, 20);
-            this.txt_Surname.TabIndex = 3;
             // 
             // panel7
             // 
@@ -554,42 +590,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // showPassword
-            // 
-            this.showPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPassword.FlatAppearance.BorderSize = 0;
-            this.showPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPassword.Image = global::Project03.Properties.Resources.icons8_visible_16;
-            this.showPassword.Location = new System.Drawing.Point(409, 196);
-            this.showPassword.Name = "showPassword";
-            this.showPassword.Size = new System.Drawing.Size(25, 25);
-            this.showPassword.TabIndex = 6;
-            this.showPassword.UseVisualStyleBackColor = false;
-            // 
-            // showConfirmPassword
-            // 
-            this.showConfirmPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showConfirmPassword.FlatAppearance.BorderSize = 0;
-            this.showConfirmPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.showConfirmPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showConfirmPassword.Image = global::Project03.Properties.Resources.icons8_visible_16;
-            this.showConfirmPassword.Location = new System.Drawing.Point(409, 265);
-            this.showConfirmPassword.Name = "showConfirmPassword";
-            this.showConfirmPassword.Size = new System.Drawing.Size(25, 25);
-            this.showConfirmPassword.TabIndex = 6;
-            this.showConfirmPassword.UseVisualStyleBackColor = false;
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(80, 171);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 15);
-            this.lblError.TabIndex = 5;
             // 
             // SignUp
             // 

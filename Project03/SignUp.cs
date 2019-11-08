@@ -126,7 +126,7 @@ namespace Project03
                 if (char.IsDigit(txt_Password.Text[i]))
                 {
                     digit = true;
-                    break;
+                    //break;
                 }
             }
             for (int i = 0; i < txt_Password.TextLength; i++)
@@ -134,7 +134,7 @@ namespace Project03
                 if (char.IsLower(txt_Password.Text[i]))
                 {
                     spec = true;
-                    break;
+                    //break;
                 }
             }
             for (int i = 0; i < txt_Password.TextLength; i++)
@@ -142,7 +142,7 @@ namespace Project03
                 if (txt_Password.Text[i] == '#' || txt_Password.Text[i] == '!' || txt_Password.Text[i] == '@' || txt_Password.Text[i] == '$' || txt_Password.Text[i] == '%' || txt_Password.Text[i] == '^')
                 {
                     spec = true;
-                    break;
+                    //break;
                 }
             }
             if (digit == true && lowChar == true && spec == true)
@@ -192,7 +192,7 @@ namespace Project03
                     //        break;
                     //    }
                     //}
-                    if (txt_Password.TextLength <= 6 || !CheckPasswords())
+                    if (txt_Password.TextLength <= 6 && !CheckPasswords())
                         MessageBox.Show("Некорректный формат пароля! Длина пароля должно быть не менее шести символов, из которых должна быть, как минимум, одна буква нижнего регистра, одна цифра и одна из следующих символов: !,#,%,^,@", "Оповещение системы!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
@@ -204,20 +204,20 @@ namespace Project03
                             using (SqlConnection connection = new SqlConnection(Connection.GetString()))
                             {
                                 await connection.OpenAsync();
-                                string queryPersonalInfo = "INSERT INTO RunnerPersonalInfo VALUES (@n, @s, @g, @d, @c, @pn, @pc)";
+                                string queryPersonalInfo = "INSERT INTO [UserPersonalInformation] VALUES (@e, @n, @s, @g, @pn, @pc, @d, @c)";
                                 SqlCommand command = new SqlCommand(queryPersonalInfo, connection);
+                                command.Parameters.AddWithValue("@e", txt_Email.Text);
                                 command.Parameters.AddWithValue("@n", txt_Name.Text);
                                 command.Parameters.AddWithValue("@s", txt_Surname.Text);
                                 command.Parameters.AddWithValue("@g", cmb_Gender.Text);
-                                command.Parameters.AddWithValue("@d", dtp_DateOfBirth.Value);
-                                command.Parameters.AddWithValue("@c", cmb_Country.Text);
                                 command.Parameters.AddWithValue("@pn", txt_Picture.Text);
                                 command.Parameters.AddWithValue("@pc", a);
+                                command.Parameters.AddWithValue("@d", dtp_DateOfBirth.Value);
+                                command.Parameters.AddWithValue("@c", cmb_Country.Text);
                                 await command.ExecuteNonQueryAsync();
 
-                                string queryConfidentialInfo = "INSERT INTO RunnerConfidentialInfo VALUES (@e, @u, @p)";
+                                string queryConfidentialInfo = "INSERT INTO [UserConfidentialInformation] VALUES (@u, @p)";
                                 SqlCommand command1 = new SqlCommand(queryConfidentialInfo, connection);
-                                command1.Parameters.AddWithValue("@e", txt_Email.Text);
                                 command1.Parameters.AddWithValue("@u", txt_Username.Text);
                                 command1.Parameters.AddWithValue("@p", txt_Password.Text);
                                 await command1.ExecuteNonQueryAsync();

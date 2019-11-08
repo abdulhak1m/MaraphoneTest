@@ -10,7 +10,7 @@ namespace Project03
     {
         public static string GetString()
         {
-            return @"Data Source=DESKTOP-6FAKA40;Initial Catalog=db1;Integrated Security=True";
+            return @"Data Source=DESKTOP-57F7258;Initial Catalog=db4;Integrated Security=True";
         }
     }
 }
